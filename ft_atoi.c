@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpithaks <rpithaks@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 11:40:40 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/20 02:20:42 by rpithaks         ###   ########.fr       */
+/*   Created: 2024/01/19 08:06:35 by rpithaks          #+#    #+#             */
+/*   Updated: 2024/01/19 14:00:58 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	*head;
-	int	*tail;
-	int	num;
+#include <stdio.h>
 
-	head = tab;
-	if (size > 0)
-	{
-		tail = head + size - 1;
-	}
-	else
-	{
-		tail = head;
-	}
+int	ft_atoi(char	*str)
+{
+	long	num;
+	int		sign;
+
+	sign = 1;
 	num = 0;
-	while (head < tail)
+	while ((*str >= 9 && *str <= 13) || *str == 32)
 	{
-		num = *head;
-		*head = *tail;
-		*tail = num;
-		head++;
-		tail--;
+		str++;
 	}
+	while (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sign = sign * -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		num = num * 10 + *str - '0';
+		str++;
+	}
+	return (sign * num);
 }

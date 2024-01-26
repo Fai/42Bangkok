@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpithaks <rpithaks@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 11:40:40 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/20 02:20:42 by rpithaks         ###   ########.fr       */
+/*   Created: 2024/01/20 01:58:11 by rpithaks          #+#    #+#             */
+/*   Updated: 2024/01/20 02:03:22 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	*head;
-	int	*tail;
-	int	num;
+#include <unistd.h>
 
-	head = tab;
-	if (size > 0)
+int	main(int argc, char **argv)
+{
+	int		argindex;
+	char	*argstr;
+
+	argindex = argc - 1;
+	if (argc <= 0)
 	{
-		tail = head + size - 1;
+		return (0);
 	}
-	else
+	while (argindex > 0)
 	{
-		tail = head;
+		argstr = argv[argindex];
+		while (*argstr != '\0')
+		{
+			write(1, argstr, 1);
+			argstr++;
+		}
+		write(1, "\n", 1);
+		argindex--;
 	}
-	num = 0;
-	while (head < tail)
-	{
-		num = *head;
-		*head = *tail;
-		*tail = num;
-		head++;
-		tail--;
-	}
+	return (0);
 }
