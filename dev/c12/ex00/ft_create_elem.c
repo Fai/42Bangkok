@@ -1,13 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_advanced_sort_string_tab.c                      :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 08:06:35 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/27 05:49:01 by rpithaks         ###   ########.fr       */
+/*   Created: 2024/01/17 12:15:04 by rpithaks          #+#    #+#             */
+/*   Updated: 2024/01/27 05:54:38 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *));
+t_list *ft_create_elem(void *data);

@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 01:12:05 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/26 21:45:27 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/01/27 05:59:20 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ char *get_key(char *line)
     char *key = ft_strtok(line, ":");
     if (key)
     {
-        /* Remove trailing whitespace */
         while (ft_isspace((unsigned char)key[ft_strlen(key) - 1]))
         {
             key[ft_strlen(key) - 1] = '\0';
@@ -107,7 +106,7 @@ char *get_value(char *line)
     char *value = ft_strtok(NULL, "\n");
     if (value)
     {
-        /* Remove leading whitespace */
+        
         while(ft_isspace((unsigned char)*value)) 
         {
             value++;
