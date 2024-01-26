@@ -1,26 +1,29 @@
-char	*ft_strncpy(char	*dest, char	*src, unsigned int n)
-{
-	unsigned int	scount;
-	unsigned int	dcount;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rpithaks <rpithaks@student.42bangkok.com>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/17 16:18:05 by rpithaks          #+#    #+#             */
+/*   Updated: 2024/01/17 16:21:16 by rpithaks         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	scount = 0;
-	dcount = 0;
-	while (scount < n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int	count;
+
+	count = 0;
+	while (count < n && src[count] != '\0')
 	{
-		if (*src)
-		{
-			*dest = *src;
-			src++;
-			scount++;
-		}
-		else
-		{
-			*dest = '\0';
-		}
-		dest++;
-		dcount++;
+		dest[count] = src[count];
+		count++;
 	}
-	src = src - scount;
-	dest = dest - dcount;
+	while (count < n)
+	{
+		dest[count] = '\0';
+		count++;
+	}
 	return (dest);
 }
