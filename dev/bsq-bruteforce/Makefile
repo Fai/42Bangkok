@@ -1,6 +1,6 @@
 CC=cc
 CFLAGS=-Wall -Wextra -Werror -Iincludes
-SRCS= srcs/main.c srcs/utils.c srcs/ft_split.c
+SRCS= srcs/main.c srcs/utils.c
 OBJS=$(SRCS:.c=.o)
 TARGET=bsq
 

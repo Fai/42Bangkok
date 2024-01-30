@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpithaks <rpithaks@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 18:46:52 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/17 18:49:05 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/01/29 23:53:55 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@ int	ft_strlen(char *str)
 	int	len;
 
 	len = 0;
-	while (*str)
-	{
-		str++;
+	while (str[len])
 		len++;
-	}
-	str = str - len;
 	return (len);
 }

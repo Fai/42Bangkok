@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:41:58 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/30 11:12:11 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:17:08 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,39 +17,13 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-# define BUFF_SIZE 2097152
-// # define BUFF_SIZE 131072
+# define BUFF_SIZE 1024
 
-typedef struct	s_square
-{
-	int	x;
-	int	y;
-	int	length;
-}	t_square;
-
-typedef struct s_pattern
-{
-	char	char_empty;
-	char	char_obstacle;
-	char	char_full;
-}	t_pattern;
-
-typedef struct  s_map
-{
-	int			**field;
-	int			field_row;
-	int			field_col;
-	t_pattern	*pattern;
-	t_square	*square;
-}	t_map;
-
-char	**ft_split(char *str, char *charset);
-int		ft_strlen(char *str);
-int	    ft_set_pattern(char *file_data, t_map *map);
-int	    ft_set_map(char **file_data, t_map *map);
-int     ft_parse_input(char *mapfile, t_map *map);
-int     ft_print_result(t_map *map);
-int     ft_str_is_printable(char *str);
-int     ft_min(t_map *map, int row, int col);
+int     ft_parse_input(char *mapfile, char **map, char *pattern);
+int     ft_set_pattern(char buffer[BUFF_SIZE], int *mapsize, char *pattern);
+void    **ft_set_map(char buffer[BUFF_SIZE], char *pattern, char **map, int *mapsize);
+int     ft_map_is_valid(char **map, char *pattern);
+int     ft_calculate_square(char **map, char *pattern);
+int	    ft_print_result(char **map);
 
 #endif
