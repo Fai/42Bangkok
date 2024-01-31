@@ -1,6 +1,7 @@
 # Set compiler
 CC = cc
 
+SRC = ./srcs/do_op.c ./math_op.c
 # Set flags, also tells to include "includes" directory for the .h file
 CFLAGS = -Wall -Wextra -Werror -Iincludes
 

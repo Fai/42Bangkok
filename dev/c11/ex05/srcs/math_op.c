@@ -1,53 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   math_op.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 08:06:35 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/31 04:51:41 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:42:18 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int	ft_any(char **tab, int (*f) (char*));
+#include "do_op.h"
 
-int    ft_function(char *str)
+int	ft_add(int a, int b)
 {
-    if (*str == 'X')
-        return (1);
-    return (0);
+	return (a + b);
 }
 
-int    main(void)
+int	ft_sub(int a, int b)
 {
-    char    **array;
-
-    array = malloc(5 * sizeof(char *));
-    array[0] = "O";
-    array[1] = "O";
-    array[2] = "O";
-    array[3] = "X";
-    array[4] = 0;
-    printf("ft_any(...) = %d\n", ft_any(array, &ft_function));
+	return (a - b);
 }
-*/
 
-int	ft_any(char **tab, int (*f) (char*))
+int	ft_mul(int a, int b)
 {
-	int	i;
+	return (a * b);
+}
 
-	i = 0;
-	while (tab[i])
+int	ft_div(int a, int b)
+{
+	if (b == 0)
 	{
-		if (f(tab[i]))
-		{
-			return (1);
-		}
-		i++;
+		write(1, "Stop : division by zero\n", 24);
+		return (-1);
 	}
-	return (0);
+	else
+		return (a / b);
+}
+
+int	ft_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		write(1, "Stop : modulo by zero\n", 22);
+		return (-1);
+	}
+	else
+		return (a % b);
 }
