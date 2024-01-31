@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   create_input2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jichompo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 01:12:05 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/30 23:24:47 by rpithaks         ###   ########.fr       */
+/*   Created: 2024/01/28 15:55:54 by jichompo          #+#    #+#             */
+/*   Updated: 2024/01/28 15:56:33 by jichompo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "rush02.h"
 
-int	ft_is_prime(int nb)
+int	ft_valid_start(char *str)
 {
-	int	n;
-
-	n = 2;
-	if (nb <= 1)
+	while (*str)
 	{
-		return (0);
-	}
-	if (nb <= 3)
-	{
-		return (1);
-	}
-	while (n <= nb / n)
-	{
-		if (nb % n == 0)
-		{
+		if ((*str >= '0' && *str <= '9') || (*str == ' '))
+			str++;
+		else
 			return (0);
-		}
-		n++;
 	}
 	return (1);
 }
 
-int	ft_find_next_prime(int nb)
+int	ft_get_offset(int size)
 {
-	while (!ft_is_prime(nb))
-	{
-		nb = nb + 1;
-	}
-	return (nb);
+	if (size >= 3)
+		return (3);
+	if (size == 2)
+		return (2);
+	return (1);
 }

@@ -3,18 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpithaks <rpithaks@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 15:11:26 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/11 15:15:28 by rpithaks         ###   ########.fr       */
+/*   Created: 2024/01/20 02:49:37 by rpithaks          #+#    #+#             */
+/*   Updated: 2024/01/30 23:32:28 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_swap(int *a, int *b)
 {
-	int	c;
+	int	value_a;
+	int	value_b;			
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	value_a = *a;
+	value_b = *b;
+	*a = value_b;
+	*b = value_a;
 }

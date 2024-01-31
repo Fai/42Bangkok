@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 18:46:52 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/29 23:53:55 by rpithaks         ###   ########.fr       */
+/*   Created: 2024/01/20 02:49:37 by rpithaks          #+#    #+#             */
+/*   Updated: 2024/01/30 23:32:33 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int	ft_strlen(char *str)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
