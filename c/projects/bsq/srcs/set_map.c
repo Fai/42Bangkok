@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:55:55 by wsiriyon          #+#    #+#             */
-/*   Updated: 2024/01/31 16:44:40 by wsiriyon         ###   ########.fr       */
+/*   Updated: 2024/01/31 20:02:46 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,10 +90,10 @@ int	ft_set_map(char **file_data, t_map *map)
 	map->field = (int **)malloc(sizeof(int *) * (map->field_row));
 	if (map->field == NULL)
 		return (0);
-	map->field_col = strlen(file_data[1]);
+	map->field_col = ft_strlen(file_data[1]);
 	while (++row < map->field_row && file_data[row + 1] != NULL)
 	{
-		if (strlen(file_data[row + 1]) != map->field_col)
+		if (ft_strlen(file_data[row + 1]) != map->field_col)
 			return (0);
 		map->field[row] = (int *)malloc(sizeof(int) * (map->field_col));
 		if (map->field[row] == NULL)
