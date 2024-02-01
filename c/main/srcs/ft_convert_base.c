@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:15:04 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/01/27 05:01:16 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/02/01 18:37:14 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,12 +97,3 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	result = ft_putnbr_base(num, base_to, result, len);
 	return (result);
 }
-
-/*
-int main(int argc, char **argv)
-{
-	printf("%s\n", ft_convert_base(argv[1], argv[2], argv[3]));
-	printf("%s]n", ft_convert_base("5647","0123456789","0123456789ABCDEF"));
-	return (argc);
-}
-*/
