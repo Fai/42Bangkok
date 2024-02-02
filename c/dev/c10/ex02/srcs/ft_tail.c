@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:15:04 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/01 19:54:04 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/02/02 16:25:36 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ int	ft_tail(char *filename)
 	linecount = 0;
 	while (linebuff[linecount] != NULL)
 		linecount++;
-	lineindex = 1;
-	while (lineindex <= 10)
+	lineindex = 10;
+	while (lineindex > 0)
 	{
 		ft_putstr(linebuff[linecount - lineindex]);
 		write(1, "\n", 1);
-		lineindex++;
+		lineindex--;
 	}
 	free(linebuff);
 	return (1);
