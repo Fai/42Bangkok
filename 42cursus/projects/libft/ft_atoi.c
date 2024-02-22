@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpithaks <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:54:58 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/14 20:46:06 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:37:57 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* atoi convert a string to an integer, return int                            */
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if (c == 32 || c == '\f' || c == '\n')
 		return (1);

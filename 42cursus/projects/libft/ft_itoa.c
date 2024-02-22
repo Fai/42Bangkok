@@ -6,14 +6,14 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:54:24 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/20 23:38:22 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:38:19 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* allocate and return a string representing integer, handle negative         */
 #include "libft.h"
 
-int	ft_ndigit(int n)
+static int	ft_ndigit(int n)
 {
 	int	digit;
 

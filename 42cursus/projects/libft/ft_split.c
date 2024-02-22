@@ -6,14 +6,14 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:30:44 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/20 23:25:42 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:40:42 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* allocate and return array of string by split s with c end with NULL ptr    */
 #include "libft.h"
 
-int	ft_wc(char const *s, char c)
+static int	ft_wc(char const *s, char c)
 {
 	int	words;
 	int	index;
@@ -47,7 +47,7 @@ static void	ft_write(char *dest, char const *src, int n)
 	dest[i] = '\0';
 }
 
-int	ft_is_allocatable(char **result, int index)
+static int	ft_is_allocatable(char **result, int index)
 {
 	if (!result[index])
 	{
@@ -62,7 +62,7 @@ int	ft_is_allocatable(char **result, int index)
 	return (1);
 }
 
-void	ft_ready(int *i, int *start, char const *s, char c)
+static void	ft_ready(int *i, int *start, char const *s, char c)
 {
 	while (s[*i] == c)
 		*i += 1;
