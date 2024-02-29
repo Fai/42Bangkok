@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+print("Give me the first number: ", end = "")
+first = int(input())
+print("Give me the second number: ", end = "")
+second = int(input())
+print("Thank you!")
+print(first, " + ", second, " = ", first + second)
+print(first, " - ", second, " = ", first - second)
+print(first, " / ", second, " = ", int(first / second))
+print(first, " * ", second, " = ", first * second)
