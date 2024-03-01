@@ -3,6 +3,7 @@
 2024-03-02
 [/] third evaluation
 [/] fix re Makefile
+[/] add documentation for libft
 
 2024-02-24
 [/] second evaluation
