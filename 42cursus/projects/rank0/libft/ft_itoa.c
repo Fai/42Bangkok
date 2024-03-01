@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:54:24 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/22 19:38:19 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/01 22:04:28 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,29 +30,29 @@ static int	ft_ndigit(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*numstring;
-	int		size;
-	int		index;
+	char	*nptr;
+	int		s;
+	int		i;
 
-	size = ft_ndigit(n);
+	s = ft_ndigit(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	numstring = (char *)ft_calloc(sizeof(char), (size + 1));
-	if (!numstring)
+	nptr = (char *)ft_calloc(sizeof(char), (s + 1));
+	if (!nptr)
 		return (NULL);
 	if (n < 0)
 	{
 		n = n * -1;
-		numstring[0] = '-';
+		nptr[0] = '-';
 	}
-	index = size - 1;
+	i = s - 1;
 	while (n != 0)
 	{
-		numstring[index] = (n % 10) + '0';
+		nptr[i] = (n % 10) + '0';
 		n = n / 10;
-		index--;
+		i--;
 	}
-	return (numstring);
+	return (nptr);
 }

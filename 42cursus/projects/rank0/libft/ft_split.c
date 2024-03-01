@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:30:44 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/22 19:40:42 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/01 23:11:24 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_wc(char const *s, char c)
 	return (words);
 }
 
-static void	ft_write(char *dest, char const *src, int n)
+static void	ft_strncpy(char *dest, char const *src, int n)
 {
 	int	i;
 
@@ -47,7 +47,7 @@ static void	ft_write(char *dest, char const *src, int n)
 	dest[i] = '\0';
 }
 
-static int	ft_is_allocatable(char **result, int index)
+static int	ft_isallocate(char **result, int index)
 {
 	if (!result[index])
 	{
@@ -62,7 +62,7 @@ static int	ft_is_allocatable(char **result, int index)
 	return (1);
 }
 
-static void	ft_ready(int *i, int *start, char const *s, char c)
+static void	ft_findnextword(int *i, int *start, char const *s, char c)
 {
 	while (s[*i] == c)
 		*i += 1;
@@ -87,11 +87,11 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (++index < words)
 	{
-		ft_ready(&i, &start, s, c);
+		ft_findnextword(&i, &start, s, c);
 		result[index] = (char *)malloc(sizeof(char) * (i - start + 1));
-		if (!ft_is_allocatable(result, index))
+		if (!ft_isallocate(result, index))
 			return (NULL);
-		ft_write(result[index], s + start, i - start);
+		ft_strncpy(result[index], s + start, i - start);
 	}
 	result[index] = NULL;
 	return (result);

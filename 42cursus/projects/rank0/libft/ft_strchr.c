@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpithaks <rpithaks@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:33 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/19 23:16:23 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/01 23:21:40 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)p);
 		p++;
 	}
-	if (c == *p)
+	if (*p == (unsigned char)c)
 		return ((char *)p);
 	return (0);
 }

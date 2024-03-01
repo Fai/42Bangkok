@@ -6,11 +6,13 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:54:58 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/22 19:37:57 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/01 22:09:01 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* atoi convert a string to an integer, return int                            */
+#include "libft.h"
+
 static int	ft_isspace(int c)
 {
 	if (c == 32 || c == '\f' || c == '\n')

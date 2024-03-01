@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpithaks <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:38:57 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/02/21 16:52:41 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/01 22:19:53 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new = ft_lstnew((*f)(lst->content));
 		if (!new)
 		{
+			ft_lstdelone(new, (*del));
 			ft_lstclear(&start, (*del));
 			return (start);
 		}

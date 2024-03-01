@@ -6,7 +6,7 @@
 #    By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/14 17:35:49 by rpithaks          #+#    #+#              #
-#    Updated: 2024/02/20 20:18:54 by rpithaks         ###   ########.fr        #
+#    Updated: 2024/03/02 02:55:52 by rpithaks         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,15 +55,15 @@ SRCS = \
 	ft_putnbr_fd.c
 
 SRCS_BONUS = \
-	ft_lstnew_bonus.c \
-	ft_lstadd_front_bonus.c \
-	ft_lstsize_bonus.c \
-	ft_lstlast_bonus.c \
-	ft_lstadd_back_bonus.c \
-	ft_lstdelone_bonus.c \
-	ft_lstclear_bonus.c \
-	ft_lstiter_bonus.c \
-	ft_lstmap_bonus.c
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 # object files
 OBJS = $(SRCS:.c=.o)
@@ -82,20 +82,23 @@ all: $(NAME)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 
-# build the library
+# build the library archive
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
-bonus: $(OBJS_BONUS)
+# build the bonus library archive
+bonus: $(OBJS) $(OBJS_BONUS)
 	$(AR) $(NAME) $^					
 
+# clean object files
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
 						
+# clean all files
 fclean: clean
 	$(RM) $(NAME)
-			
-re:
-	fclean all
+
+# rebuild
+re: fclean all
  
 .PHONY: all clean fclean re bonus
