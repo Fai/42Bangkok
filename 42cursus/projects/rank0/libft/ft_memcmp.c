@@ -10,7 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* memcmp compare the first n bytes of s1 and s2, return >=< zero */
+// FUNCTION ft_memcmp (recreate libc function)
+/**
+ * @brief Compare contents of two memory areas.
+ * 
+ * The original function is part of the <string.h> standard library.
+ * The return value is the arithmetic result of subtracting the last compared
+ *  byte in s2 from the last compared byte in s1.
+ * The comparison stops when a difference is found.
+ * 
+ * @param s1 Pointer to memory area 1.
+ * @param s2 Pointer to memory area 2.
+ * @param n The number of bytes to compare.
+ * @return 0 if s1==s2.
+ * @return A negative value if s1<s2.
+ * @return A positive value if s1>s2 (only taking into account the first n
+ *  bytes).
+ * 
+ * @note No external dependencies allowed.
+ */
+//int		memcmp(const void *s1, const void *s2, size_t n);
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

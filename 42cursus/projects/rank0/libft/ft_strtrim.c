@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* strtrim allocate and return a copy of s1 with the 'set' remove             */
+// FUNCTION ft_strtrim (novel function)
+/**
+ * @brief Trims a string with reference to a set of characters to remove from the
+ *  start and end.
+ * 
+ * Allocates with malloc() and returns a copy of ‘s1’ with the characters
+ *  specified in ‘set’ removed from the beginning and the end of the string.
+ * 
+ * @param s1 The string to be trimmed.
+ * @param set The reference set of characters to trim.
+ * @return The trimmed string.
+ * @return NULL if the allocation fails.
+ * 
+ * @note Depends on malloc() from <stdlib.h>.
+ */
+//char *ft_strtrim(char const *s1, char const *set);
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

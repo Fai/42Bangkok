@@ -10,9 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* calloc - allocate and free dynamic memory                                  */
-/* calloc allocate memory for array of nmemb elements of size bytes           */
-/* return a pointer to the allocated memory                                   */
+// FUNCTION ft_calloc (recreate libc function)
+/**
+ * @brief Allocate memory for an array.
+ * 
+ * The original function is part of the <stdlib.h> standard library.
+ * Allocates memory for an array of nmemb elements of size bytes each and
+ *  returns a pointer to the allocated memory.  The memory is set to zero.
+ * The original function can fail with an error ‘ENOMEM Out of memory’ under some
+ *  conditions.
+ * 
+ * @param nmemb The number of elements in the array.
+ * @param size The number of bytes needed for each element of the array.
+ * @return If nmemb or size is 0, then returns either NULL, or a unique pointer
+ *  value that can later be successfully passed to free().
+ * @return If nmemb x size would result in integer overflow, then returns an
+ *  error (NULL).
+ * Otherwise, returns a pointer to the allocated memory.
+ * 
+ * @note Depends on malloc() from <stdlib.h>.
+ */
+//void	*calloc(size_t nmemb, size_t size);                       */
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

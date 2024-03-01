@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* allocate and return array of string by split s with c end with NULL ptr    */
+// FUNCTION ft_split (novel function)
+/**
+ * @brief Splits a string into multiple substrings based on a delimiter.
+ * 
+ * Allocates with malloc() and returns an array of strings obtained by splitting
+ *  ‘s’ using the character ‘c’ as a delimiter. The array must end with a NULL
+ *  pointer.
+ * 
+ * @param s The string to be split.
+ * @param c The delimiter character.
+ * @return The array of new strings resulting from the split.
+ * @return NULL if the allocation fails.
+ * 
+ * @note Depends on malloc() and free() from <stdlib.h>.
+ */
+//char **ft_split(char const *s, char c);
 #include "libft.h"
 
 static int	ft_wc(char const *s, char c)

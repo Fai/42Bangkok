@@ -10,7 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* allocate and return a string representing integer, handle negative         */
+// FUNCTION ft_itoa (novel function)
+/**
+ * @brief Convert a positive or negative integer into an ASCII string.
+ * 
+ * Allocates with malloc() and returns a string representing the integer received
+ *  as an argument. Negative numbers must be handled.
+ * 
+ * @param n The integer to convert.
+ * @return The string representing the integer.
+ * @return NULL if the allocation fails.
+ * 
+ * @note Depends on malloc() from <stdlib.h>.
+ */
+//char *ft_itoa(int n);
 #include "libft.h"
 
 static int	ft_ndigit(int n)

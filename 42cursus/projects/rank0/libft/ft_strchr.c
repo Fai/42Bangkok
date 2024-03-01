@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* strchr return a pointer to the first occurrence of char c in the string s  */
+// FUNCTION ft_strchr (recreate libc function)
+/**
+ * @brief Locate single-byte character in string (first occurrence).
+ * 
+ * The original function is part of the <string.h> standard library.
+ * 
+ * @param s Pointer to a string.
+ * @param c Int representing the character to search for (ASCII byte value).
+ * @return NULL if the character is not found.
+ * @return A pointer to the matched character. The terminating null byte is
+ *  considered part of the string, so that if c is specified as '\0' it will
+ *  return a pointer to the terminator.
+ * 
+ * @note No external dependencies allowed.
+ */
+//char *strchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c)
 {
 	unsigned char	*p;

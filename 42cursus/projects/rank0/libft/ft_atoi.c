@@ -10,7 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* atoi convert a string to an integer, return int                            */
+// FUNCTION ft_atoi (recreate libc function)
+/**
+ * @brief Convert an ASCII string of numbers to an integer.
+ * 
+ * The original function is part of the <stdlib.h> standard library.
+ * Converts the initial portion of the string pointed to by nptr (stopping at
+ *  the null-terminator or the first non-digit character) to int.
+ * The string may begin with an arbitrary amount of white space (as determined by
+ *  isspace(3)) followed by a single optional '+' or '-' sign.
+ * No checks for overflow or underflow are done.
+ * Only base-10 input can be converted.
+ * 
+ * @param nptr A pointer to a string.
+ * @return The converted value.
+ * @return 0 on error (note there is no way to distinguish between 0 as an error
+ *  and as a converted value).
+ * 
+ * @note No external dependencies allowed.
+ */
+//int		atoi(const char *nptr);                        */
 #include "libft.h"
 
 static int	ft_isspace(int c)

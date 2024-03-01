@@ -10,6 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// FUNCTION ft_putnbr_fd (novel function)
+/**
+ * @brief Outputs an integer to a specified file descriptor.
+ * 
+ * Outputs the integer ‘n’ to the given file descriptor.
+ * 
+ * @param n The integer to output.
+ * @param fd The file descriptor on which to write.
+ * @return None.
+ * 
+ * @note Depends on write() from <unistd.h>.
+ */
+//void	ft_putnbr_fd(int n, int fd);
+
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

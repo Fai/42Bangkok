@@ -10,6 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// FUNCTION ft_isalnum (recreate libc function)
+/**
+ * @brief Checks for an alphanumeric character.
+ * 
+ * The original function is part of the <ctype.h> standard library.
+ * Equivalent to (isalpha(c) || isdigit(c)).
+ * 
+ * @param c An int; must have value of an unsigned char or EOF.
+ * @return The values returned are nonzero if the character c falls into the
+ *  tested class.
+ * @return  Zero if not.
+ * 
+ * @note No external dependencies allowed.
+ */
+//int isalnum(int c);
 int	ft_isalnum(int c)
 {
 	if (c >= 'a' && c <= 'z')

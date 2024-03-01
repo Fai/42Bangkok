@@ -10,11 +10,20 @@
 #                                                                              #
 # **************************************************************************** #
 
-# variables
+# Makefile for archive of c library function libft.a
 
+# variables declariation
+
+# compiler
 CC = cc
+
+# compiler flag
 CFLAGS = -Wall -Wextra -Werror -Iincludes
+
+# output name
 NAME = libft.a
+
+# header file
 HEADERS	= libft.h
 
 # source files
@@ -54,6 +63,7 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
+# bonus source files
 SRCS_BONUS = \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
@@ -68,12 +78,12 @@ SRCS_BONUS = \
 # object files
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-
 # archive file with create, replace, index
 AR = ar rcs
-
 # remove with force
 RM = rm -f
+
+# rules
 
 # default target
 all: $(NAME)
@@ -85,6 +95,9 @@ all: $(NAME)
 # build the library archive
 $(NAME): $(OBJS)
 	$(AR) $@ $^
+
+# default target
+all: $(NAME)
 
 # build the bonus library archive
 bonus: $(OBJS) $(OBJS_BONUS)
@@ -101,4 +114,5 @@ fclean: clean
 # rebuild
 re: fclean all
  
-.PHONY: all clean fclean re bonus
+ # prevent files named like rules conflict
+.PHONY: all bonus clean fclean re

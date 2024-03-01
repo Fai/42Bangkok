@@ -10,7 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* strjoin allocate and return a new string which concat of prefix s1 and s2  */
+// FUNCTION ft_strjoin (novel function)
+/**
+ * @brief Concatenates two strings and returns a new string.
+ * 
+ * Allocates with malloc() and returns a new string, which is the result of the
+ *  concatenation of ‘s1’ and ‘s2’.
+ * 
+ * @param s1 The prefix string.
+ * @param s2 The suffix string.
+ * @return The new string.
+ * @return NULL if the allocation fails.
+ * 
+ * @note Depends on malloc() from <stdlib.h>.
+ */
+//char *ft_strjoin(char const *s1, char const *s2);
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

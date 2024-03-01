@@ -10,7 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* strdup - duplicate a string, return ptr to duplicate of s                  */
+// FUNCTION ft_strdup (recreate libc function)
+/**
+ * @brief Duplicate a string.
+ * 
+ * The original function is part of the <string.h> standard library.
+ * Memory for the duplicate string is obtained with malloc(), and can be freed
+ *  with free().
+ * 
+ * @param s A pointer to a string.
+ * @return A pointer to a new string which is a duplicate of the string s.
+ * @return If insufficient memory is available, returns NULL and sets errno to
+ *  indicate the cause of the error (‘ENOMEM’; insufficient memory available to
+ *  allocate duplicate string).
+ * 
+ * @note Depends on malloc() from <stdlib.h>.
+ */
+//char *strdup(const char *s);
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

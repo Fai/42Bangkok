@@ -10,8 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* memchr scan initial n bytes of memory pointed by s for first instance of c */
-/* return pointer to the matching byte or NULL if does not occur              */
+// FUNCTION ft_memchr (recreate libc function)
+/**
+ * @brief Scan memory area for first instance of a character.
+ * 
+ * The original function is part of the <string.h> standard library.
+ * 
+ * @param s A pointer to the memory area to search.
+ * @param c An int representing the character to search for.
+ * @param n The number of bytes of memory to search.
+ * @return A pointer to the matching byte or NULL if the character does not
+ *  occur in the given memory area.
+ * 
+ * @note No external dependencies allowed.
+ */
+//void	*memchr(const void *s, int c, size_t n);
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
