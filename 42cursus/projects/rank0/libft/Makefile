@@ -6,7 +6,7 @@
 #    By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/14 17:35:49 by rpithaks          #+#    #+#              #
-#    Updated: 2024/03/02 02:55:52 by rpithaks         ###   ########.fr        #
+#    Updated: 2024/03/02 16:11:46 by rpithaks         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@
 CC = cc
 
 # compiler flag
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -Wall -Wextra -Werror
 
 # output name
 NAME = libft.a
@@ -90,7 +90,7 @@ all: $(NAME)
  
 # build object file
 %.o: %.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+	$(CC) $(CFLAGS) -c $^ -o $@  -Iincludes$(HEADERS)
 
 # build the library archive
 $(NAME): $(OBJS)

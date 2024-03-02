@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:38:57 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/03/01 22:19:53 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:09:51 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*start;
 	t_list	*new;
+	void	*temp;
 
 	start = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
 	{
-		new = ft_lstnew((*f)(lst->content));
+		temp = (*f)(lst->content);
+		new = ft_lstnew(temp);
 		if (!new)
 		{
-			ft_lstdelone(new, (*del));
+			del(temp);
 			ft_lstclear(&start, (*del));
 			return (start);
 		}
