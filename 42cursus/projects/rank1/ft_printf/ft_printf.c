@@ -6,7 +6,7 @@
 /*   By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 22:30:43 by rpithaks          #+#    #+#             */
-/*   Updated: 2024/03/02 16:08:30 by rpithaks         ###   ########.fr       */
+/*   Updated: 2024/03/04 06:50:12 by rpithaks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,3 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(args);
 }
-
-// int	main(void)
-// {
-// 	ft_printf("Hello, %s!\n", "world");
-// 	ft_printf("The number is %d\n", 42);
-// 	ft_printf("The character is %c\n", 'A');
-// 	return (0);
-// }

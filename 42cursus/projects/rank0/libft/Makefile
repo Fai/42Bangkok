@@ -6,7 +6,7 @@
 #    By: rpithaks <rpithaks@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/14 17:35:49 by rpithaks          #+#    #+#              #
-#    Updated: 2024/03/02 16:11:46 by rpithaks         ###   ########.fr        #
+#    Updated: 2024/03/04 05:08:52 by rpithaks         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ all: $(NAME)
  
 # build object file
 %.o: %.c
-	$(CC) $(CFLAGS) -c $^ -o $@  -Iincludes$(HEADERS)
+	$(CC) $(CFLAGS) -c $^ -o $@
 
 # build the library archive
 $(NAME): $(OBJS)
