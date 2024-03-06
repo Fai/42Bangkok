@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-print("Give me a number: ", end = "")
-num = float(input())
+from decimal import *
+getcontext().prec = 28       
+print(getcontext())
+num = float(input("Give me a number: "))
 if num % 1 == 0:
     print("The number is an integer")
 else:
